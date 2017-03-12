@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cc.cuichen.gps_alarm.MainActivity">
+
+    <TextView
+        android:text="当前位置:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:id="@+id/textView1" />
+
+    <TextView
+        android:text="正在定位，请稍后..."
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:id="@+id/locView"
+        android:layout_below="@+id/textView1"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="闹钟设置:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/locView"
+        android:layout_alignParentStart="true"
+        android:textSize="18sp"
+        android:textStyle="normal|bold"
+        android:id="@+id/text_Set" />
+
+    <TextView
+        android:text="经度:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/text_Set"
+        android:layout_alignParentStart="true"
+        android:id="@+id/text_long" />
+
+    <TextView
+        android:text="纬度:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_long"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/text_lati" />
+
+    <TextView
+        android:text="距离:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_lati"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="20dp"
+        android:id="@+id/text_dis" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:layout_below="@+id/text_Set"
+        android:layout_toRightOf="@+id/text_long"
+        android:layout_alignStart="@+id/text_long"
+        android:layout_marginStart="50dp"
+        android:id="@+id/edit_long" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="5"
+        android:id="@+id/edit_lati"
+        android:layout_below="@+id/edit_long"
+        android:layout_alignStart="@+id/text_lati"
+        android:layout_marginStart="50dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="5"
+        android:id="@+id/edit_dis"
+        android:layout_below="@+id/edit_lati"
+        android:layout_alignStart="@+id/text_dis"
+        android:layout_marginStart="50dp"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:text="设置"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_dis"
+        android:layout_marginTop="30dp"
+        android:id="@+id/button_set" />
+
+    <Button
+        android:text="从地图中选取"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit_long"
+        android:layout_toRightOf="@+id/edit_lati"
+        android:layout_marginStart="60dp"
+        android:id="@+id/map_button" />
+
+</RelativeLayout>
